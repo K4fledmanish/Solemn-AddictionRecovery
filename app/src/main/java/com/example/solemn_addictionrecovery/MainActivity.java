@@ -21,8 +21,9 @@ import com.google.android.gms.tasks.Task;
 public class MainActivity extends AppCompatActivity {
 
     GoogleSignInClient mGoogleSignInClient;
+    SignInButton signInButton;
 
-    private static int RC_SIGN_IN = 100;
+    int RC_SIGN_IN =0;
 
 
     @Override
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
 
         // Set the dimensions of the sign-in button.
-        SignInButton signInButton = findViewById(R.id.sign_in_button);
+        signInButton = findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
 
         signInButton.setOnClickListener(new View.OnClickListener() {
@@ -77,21 +78,17 @@ public class MainActivity extends AppCompatActivity {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
-            GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+          /*  GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
             if (acct != null) {
-                String personName = acct.getDisplayName();
-                String personGivenName = acct.getGivenName();
-                String personFamilyName = acct.getFamilyName();
                 String personEmail = acct.getEmail();
-                String personId = acct.getId();
-                Uri personPhoto = acct.getPhotoUrl();
+
 
 
                 Toast.makeText(this, "User email : " + personEmail, Toast.LENGTH_SHORT).show();
 
-            }
-
-            startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+            }*/
+            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(intent);
 
 
         } catch (ApiException e) {
@@ -102,5 +99,35 @@ public class MainActivity extends AppCompatActivity {
             Log.d("Message", e.toString());
         }
     }
+/*
+    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
+        try {
+            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+
+            GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+            if (acct != null) {
+                String personName = acct.getDisplayName();
+                String personGivenName = acct.getGivenName();
+                String personFamilyName = acct.getFamilyName();
+                String personEmail = acct.getEmail();
+                *//*String personId = acct.getId();
+                Uri personPhoto = acct.getPhotoUrl();*//*
+
+
+                Toast.makeText(this, "User email : " + personEmail, Toast.LENGTH_SHORT).show();
+
+            }
+
+            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+
+
+        } catch (ApiException e) {
+            // The ApiException status code indicates the detailed failure reason.
+            // Please refer to the GoogleSignInStatusCodes class reference for more information.
+
+
+            Log.d("Message", e.toString());
+        }
+    }*/
 }
 

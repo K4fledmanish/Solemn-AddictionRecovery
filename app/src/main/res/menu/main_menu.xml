@@ -8,12 +8,15 @@
             android:title="Home" />
         <item
             android:id="@+id/nav_account"
+            android:icon="@drawable/account_icon"
             android:title="Account" />
         <item
             android:id="@+id/nav_calorie"
+            android:icon="@drawable/calorie_icon"
             android:title="Calorie Counter" />
         <item
             android:id="@+id/nav_substance"
+            android:icon="@drawable/substance_icon"
             android:title="Substance" />
     </group>
 
@@ -41,5 +44,17 @@
         </item>
 
     </group>
+
+    <item android:title="Communicate">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/rate_icon"
+                android:title="Rate" />
+        </menu>
+
+    </item>
 
 </menu>
