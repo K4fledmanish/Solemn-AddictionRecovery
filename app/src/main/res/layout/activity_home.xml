@@ -66,7 +66,7 @@
                 android:layout_width="103dp"
                 android:layout_height="89dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="40dp"
+                android:layout_marginEnd="140dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/sntd" />

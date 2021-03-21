@@ -3,6 +3,8 @@ package com.example.solemn_addictionrecovery;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -18,6 +20,7 @@ public class CalorieCounterActivity extends AppCompatActivity implements Navigat
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    ImageButton cameraButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,7 @@ public class CalorieCounterActivity extends AppCompatActivity implements Navigat
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+        cameraButton = findViewById(R.id.cameraBtn);
         setSupportActionBar(toolbar);
 
         //Navigation Drawer Menu
@@ -38,7 +42,21 @@ public class CalorieCounterActivity extends AppCompatActivity implements Navigat
 
         navigationView.setCheckedItem(R.id.nav_home);
 
+        cameraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch(v.getId()) {
+                    case R.id.cameraBtn:
+                        Intent intent2 = new Intent(CalorieCounterActivity.this, CameraActivity.class);
+                        startActivity(intent2);
+                        break;
+                }
+
+            }
+        });
     }
+
+
 
 
     @Override
@@ -59,11 +77,11 @@ public class CalorieCounterActivity extends AppCompatActivity implements Navigat
                 startActivity(intent2);
                 break;
             case R.id.nav_calorie:
-                Intent intent = new Intent(CalorieCounterActivity.this, CalorieCounterActivity.class);
-                startActivity(intent);
                 break;
 
             case R.id.nav_account:
+                Intent intent = new Intent(CalorieCounterActivity.this, ProfileActivity.class);
+                startActivity(intent);
                 break;
 
         }
