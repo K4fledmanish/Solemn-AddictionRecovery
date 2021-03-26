@@ -87,6 +87,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent2);
                 break;
 
+            case R.id.nav_substance:
+                Intent intent3 = new Intent(HomeActivity.this, SubstanceActivity.class);
+                startActivity(intent3);
+                break;
+
+            case R.id.nav_alcohol:
+                Intent intent4 = new Intent(HomeActivity.this, AlcoholActivity.class);
+                startActivity(intent4);
+                break;
+
             case R.id.nav_logout:
                 signOut();
                 break;

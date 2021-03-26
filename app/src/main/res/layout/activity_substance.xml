@@ -71,26 +71,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/sntd" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="#00FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"
-                app:layout_constraintVertical_bias="0.0">
-
-                <ImageButton
-                    android:id="@+id/cameraBtn"
-                    android:layout_width="142dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:backgroundTint="#A15858"
-                    android:tint="#FAFAFA"
-                    app:srcCompat="@drawable/camera_icon" />
-            </RelativeLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

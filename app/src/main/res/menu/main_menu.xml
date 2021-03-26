@@ -18,6 +18,10 @@
             android:id="@+id/nav_substance"
             android:icon="@drawable/substance_icon"
             android:title="Substance" />
+        <item
+            android:id="@+id/nav_alcohol"
+            android:icon="@drawable/substance_icon"
+            android:title="14 Steps for Alcholic" />
     </group>
 
     <group android:checkableBehavior="single">

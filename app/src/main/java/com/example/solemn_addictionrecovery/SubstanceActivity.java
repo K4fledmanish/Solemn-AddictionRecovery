@@ -1,11 +1,8 @@
 package com.example.solemn_addictionrecovery;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -15,51 +12,35 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 
-public class ProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class SubstanceActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    TextView email;
-    ImageView imageView;
     GoogleSignInClient mGoogleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
-
+        setContentView(R.layout.activity_substance);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        imageView = findViewById(R.id.profileImage);
-        email = findViewById(R.id.textEmail);
-
-        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
-        if (acct != null) {
-            String personEmail = acct.getEmail();
-            Uri personPhoto = acct.getPhotoUrl();
-
-            email.setText(personEmail);
-
-            Glide.with(this).load(String.valueOf(personPhoto)).into(imageView);
-        }
-
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
 
         //Navigation Drawer Menu
@@ -73,6 +54,8 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
         navigationView.setCheckedItem(R.id.nav_home);
 
     }
+
+
 
 
     @Override
@@ -89,24 +72,24 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
 
         switch (item.getItemId()) {
             case R.id.nav_home:
-                Intent intent = new Intent(ProfileActivity.this, HomeActivity.class);
+                Intent intent = new Intent(SubstanceActivity.this, HomeActivity.class);
                 startActivity(intent);
                 break;
             case R.id.nav_calorie:
-                Intent intent2 = new Intent(ProfileActivity.this, CalorieCounterActivity.class);
+                Intent intent2 = new Intent(SubstanceActivity.this, CalorieCounterActivity.class);
                 startActivity(intent2);
-               break;
-
-            case R.id.nav_account:
                 break;
 
-            case R.id.nav_substance:
-                Intent intent3 = new Intent(ProfileActivity.this, SubstanceActivity.class);
+            case R.id.nav_account:
+                Intent intent3 = new Intent(SubstanceActivity.this, ProfileActivity.class);
                 startActivity(intent3);
                 break;
 
+            case R.id.nav_substance:
+                break;
+
             case R.id.nav_alcohol:
-                Intent intent4 = new Intent(ProfileActivity.this, AlcoholActivity.class);
+                Intent intent4 = new Intent(SubstanceActivity.this, AlcoholActivity.class);
                 startActivity(intent4);
                 break;
 
@@ -124,8 +107,8 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
 
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(ProfileActivity.this, "Signed out successfully!", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
+                Toast.makeText(SubstanceActivity.this, "Signed out successfully!", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(SubstanceActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

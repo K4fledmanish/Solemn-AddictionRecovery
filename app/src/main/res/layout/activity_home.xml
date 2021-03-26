@@ -6,6 +6,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".HomeActivity"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
@@ -17,20 +18,20 @@
         android:id="@+id/nav_view"
         app:headerLayout="@layout/header"
         app:menu="@menu/main_menu"
-        android:layout_gravity="start" />
-
+        android:layout_gravity="start"
+         android:background="@drawable/gradient_background"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:background="#03FFFFFF">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
 
             android:layout_width="match_parent"
             android:layout_height="1000dp"
-            android:background="#FFFFFF">
+            android:background="#00FDFDFD">
 
 
             <TextView
@@ -51,15 +52,13 @@
                 android:id="@+id/toolbar"
                 android:layout_width="46dp"
                 android:layout_height="41dp"
-                android:layout_marginTop="10dp"
-                android:background="#E49EE3EC"
+                android:layout_marginTop="16dp"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:navigationIcon="@drawable/menu" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -76,7 +75,7 @@
                 android:layout_width="0dp"
                 android:layout_height="175dp"
                 android:layout_marginTop="4dp"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -93,7 +92,8 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="#00FFFFFF">
 
                         <TextView
                             android:id="@+id/profileDashText"
@@ -126,7 +126,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#E3FAF4">
+                        android:background="#00E3FAF4">
 
                         <TextView
                             android:id="@+id/CalorieDash"
@@ -154,7 +154,7 @@
                 android:layout_width="0dp"
                 android:layout_height="175dp"
                 android:layout_marginTop="8dp"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -205,7 +205,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#E3FAF4">
+                        android:background="#00FFFFFF">
 
                         <TextView
                             android:id="@+id/Dash"

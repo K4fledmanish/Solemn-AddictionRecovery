@@ -3,6 +3,7 @@
     package="com.example.solemn_addictionrecovery">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.SolemnAddictionRecovery">
-        <activity android:name=".CameraActivity"></activity>
+        <activity android:name=".AlcoholActivity"></activity>
+        <activity android:name=".SubstanceActivity" />
+        <activity android:name=".CameraActivity" />
         <activity android:name=".CalorieCounterActivity" />
         <activity android:name=".HomeActivity">
 

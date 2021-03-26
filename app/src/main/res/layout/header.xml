@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="#D6E6E0"
+    android:layout_height="170dp"
     android:gravity="bottom"
     android:orientation="vertical">
 
@@ -22,9 +21,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Don't Let Your Past, Steal Your Present"
-        android:textColor="#697868"
-        android:textSize="14sp" />
+        android:textColor="#2F000000"
+        android:textSize="16sp" />
 
 </LinearLayout>

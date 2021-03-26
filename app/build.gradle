@@ -41,4 +41,7 @@ dependencies {
 
     // P.S: For Android Studio versions below 3.0, use compile keyword
     implementation 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 }
