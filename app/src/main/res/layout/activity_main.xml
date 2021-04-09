@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@drawable/menu_gradient"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -21,6 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
             android:src="@drawable/sntd" />
 
 
@@ -62,6 +64,6 @@
             android:textColor="#000000" />
 
 
-</LinearLayout>
+    </LinearLayout>
 
-            </ScrollView>
+</ScrollView>

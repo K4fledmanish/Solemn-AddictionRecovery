@@ -6,20 +6,20 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
-    tools:context=".HomeActivity"
+    android:background="@drawable/home_bg"
     android:fitsSystemWindows="true"
+    tools:context=".HomeActivity"
     tools:openDrawer="start">
 
 
-     <com.google.android.material.navigation.NavigationView
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/nav_view"
-        app:headerLayout="@layout/header"
-        app:menu="@menu/main_menu"
         android:layout_gravity="start"
-         android:background="@drawable/gradient_background"/>
+        android:background="@drawable/menu_gradient"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -65,7 +65,7 @@
                 android:layout_width="103dp"
                 android:layout_height="89dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="140dp"
+                android:layout_marginEnd="150dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/sntd" />
@@ -73,9 +73,8 @@
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="0dp"
-                android:layout_height="175dp"
-                android:layout_marginTop="4dp"
-                android:background="#00FFFFFF"
+                android:layout_height="200dp"
+                android:layout_marginTop="40dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -88,7 +87,8 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:padding="10dp"
-                    app:cardBackgroundColor="#BDE5EA">
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -99,19 +99,23 @@
                             android:id="@+id/profileDashText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/ProfileDashImage"
+                            android:layout_below="@id/alcoholSubImage"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/lemon"
-                            android:text="Profile" />
+                            android:text="Profile"
+                            android:textSize="12sp" />
 
                         <ImageView
-                            android:id="@+id/ProfileDashImage"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:id="@+id/alcoholSubImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/profilevector" />
+                            android:layout_marginTop="1dp"
+                            android:alpha="0.8"
+                            android:elevation="200dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/profileb" />
                     </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -121,12 +125,14 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:padding="10dp">
+                    android:padding="10dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#00E3FAF4">
+                        android:background="#00FFFFFF">
 
                         <TextView
                             android:id="@+id/CalorieDash"
@@ -136,15 +142,19 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/lemon"
-                            android:text="Calorie Counter" />
+                            android:text="Calorie Counter"
+                            android:textSize="12sp" />
 
                         <ImageView
                             android:id="@+id/calorieDashImage"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/scalevector" />
+                            android:layout_marginTop="1dp"
+                            android:alpha="0.8"
+                            android:elevation="200dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/fruit" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -152,9 +162,8 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="175dp"
-                android:layout_marginTop="8dp"
-                android:background="#00FFFFFF"
+                android:layout_height="200dp"
+                android:layout_marginTop="40dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -166,8 +175,9 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:padding="10dp"
-                    app:cardBackgroundColor="#BDE5EA">
+                    android:padding="1dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -181,26 +191,32 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/lemon"
-                            android:text="Substance" />
+                            android:text="Substance"
+                            android:textSize="12sp" />
 
                         <ImageView
                             android:id="@+id/substanceDashImage"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            android:background="#65BF2D2D"
-                            app:srcCompat="@drawable/drug_icon" />
+                            android:layout_marginTop="1dp"
+                            android:alpha="0.8"
+                            android:elevation="200dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/drugb" />
                     </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:padding="10dp">
+                    android:padding="10dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -211,19 +227,23 @@
                             android:id="@+id/Dash"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/DashImage"
+                            android:layout_below="@id/alcoholDashImage"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/lemon"
-                            android:text="Extra" />
+                            android:text="14 Steps For Alcoholic"
+                            android:textSize="12sp" />
 
                         <ImageView
-                            android:id="@+id/DashImage"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:id="@+id/alcoholDashImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/scalevector" />
+                            android:layout_marginTop="1dp"
+                            android:alpha="0.8"
+                            android:elevation="200dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/alcohol" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 

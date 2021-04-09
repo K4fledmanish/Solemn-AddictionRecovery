@@ -29,7 +29,7 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    TextView email;
+    TextView email, name;
     ImageView imageView;
     GoogleSignInClient mGoogleSignInClient;
 
@@ -46,15 +46,20 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
 
         imageView = findViewById(R.id.profileImage);
         email = findViewById(R.id.textEmail);
+        name = findViewById(R.id.textName);
 
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
         if (acct != null) {
             String personEmail = acct.getEmail();
             Uri personPhoto = acct.getPhotoUrl();
+            String personName = acct.getDisplayName();
 
             email.setText(personEmail);
+            name.setText(personName);
 
-            Glide.with(this).load(String.valueOf(personPhoto)).into(imageView);
+
+            Glide.with(imageView.getContext()).load(String.valueOf(personPhoto)).dontAnimate().into(imageView);
+
         }
 
         drawerLayout = findViewById(R.id.drawer_layout);

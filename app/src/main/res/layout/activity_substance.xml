@@ -6,72 +6,340 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@drawable/substance_bg"
     tools:context=".HomeActivity"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/nav_view"
-        app:headerLayout="@layout/header"
-        app:menu="@menu/main_menu"
         android:layout_gravity="start"
-        android:background="@drawable/gradient_background"/>
+        android:background="@drawable/menu_gradient"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
 
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
 
             android:layout_width="match_parent"
-            android:layout_height="1000dp"
-            android:background="#00FFFFFF">
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:orientation="vertical">
 
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="103dp"
-                android:layout_height="26dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/lemon"
-                android:text="Solemn"
-                android:textColorHighlight="#FFFFFF"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="46dp"
                 android:layout_height="41dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="30dp"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:navigationIcon="@drawable/menu" />
+
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="103dp"
-                android:layout_height="89dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="140dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="@id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 app:srcCompat="@drawable/sntd" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#E44B4B">
+
+
+                    <TextView
+                        android:id="@+id/alcoholText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/lemon"
+                        android:text="Alcohol"
+                        android:textColor="#B2E4D4D4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/alcoholText"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/lemon"
+                        android:text="Resilience Methods For \n Alcohols Craving"
+                        android:textColor="#B2E4D4D4"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:alpha="0.6"
+                        android:maxHeight="100dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/alcohol" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#E2579303">
+
+
+                    <TextView
+                        android:id="@+id/opiodsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/lemon"
+                        android:text="Opioids"
+                        android:textColor="#B2E4D4D4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/opiodsText"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/lemon"
+                        android:text="Resilience Methods For \n Alcohols Craving"
+                        android:textColor="#B2E4D4D4"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/opiodsImageView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:alpha="0.6"
+                        android:maxHeight="100dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/alcohol" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#024E48">
+
+
+                    <TextView
+                        android:id="@+id/benzoText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/lemon"
+                        android:text="Benzodiazepines"
+                        android:textColor="#B2E4D4D4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/benzoText"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/lemon"
+                        android:text="Resilience Methods For \n Alcohols Craving"
+                        android:textColor="#B2E4D4D4"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/benzoImageView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:alpha="0.6"
+                        android:maxHeight="100dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/alcohol" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#A39C0000">
+
+
+                    <TextView
+                        android:id="@+id/cannaText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:fontFamily="@font/lemon"
+                        android:text="Cannabinoids"
+                        android:textColor="#B2E4D4D4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cannaText"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/lemon"
+                        android:text="Resilience Methods For \n Alcohols Craving"
+                        android:textColor="#B2E4D4D4"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/cannaImageView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:alpha="0.6"
+                        android:maxHeight="100dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/alcohol" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ED382D97">
+
+
+                    <TextView
+                        android:id="@+id/barbiText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:fontFamily="@font/lemon"
+                        android:text="Barbiturates"
+                        android:textColor="#B2E4D4D4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/barbiText"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/lemon"
+                        android:text="Resilience Methods For \n Alcohols Craving"
+                        android:textColor="#B2E4D4D4"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/barbiImageView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:alpha="0.6"
+                        android:maxHeight="100dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/alcohol" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
     </ScrollView>
+
+
 </androidx.drawerlayout.widget.DrawerLayout>

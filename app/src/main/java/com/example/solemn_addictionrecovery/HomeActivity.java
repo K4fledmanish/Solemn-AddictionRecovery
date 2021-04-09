@@ -3,6 +3,8 @@ package com.example.solemn_addictionrecovery;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,6 +29,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     Toolbar toolbar;
     GoogleSignInClient mGoogleSignInClient;
+    ImageView imageView, imageView2, imageView3, imageView4;
 
 
 
@@ -46,6 +49,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+        imageView = findViewById(R.id.alcoholSubImage);
+        imageView2 = findViewById(R.id.calorieDashImage);
+        imageView3 = findViewById(R.id.substanceDashImage);
+        imageView4 = findViewById(R.id.alcoholDashImage);
+
 
         setSupportActionBar(toolbar);
 
@@ -59,7 +67,42 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setCheckedItem(R.id.nav_home);
 
+        imageView.setOnClickListener( new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, CalorieCounterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, SubstanceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imageView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, AlcoholActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
+
+
 
 
     @Override

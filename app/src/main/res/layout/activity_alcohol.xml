@@ -6,7 +6,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@drawable/substance_bg"
     tools:context=".HomeActivity"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
@@ -18,7 +18,7 @@
         app:headerLayout="@layout/header"
         app:menu="@menu/main_menu"
         android:layout_gravity="start"
-        android:background="@drawable/gradient_background"/>
+        android:background="@drawable/menu_gradient"/>
 
 
     <ScrollView
@@ -27,51 +27,35 @@
         >
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
 
             android:layout_width="match_parent"
-            android:layout_height="1000dp"
-            android:background="#00FFFFFF">
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:orientation="vertical">
 
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="103dp"
-                android:layout_height="26dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/lemon"
-                android:text="Solemn"
-                android:textColorHighlight="#FFFFFF"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="46dp"
                 android:layout_height="41dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="30dp"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:navigationIcon="@drawable/menu" />
+
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="103dp"
-                android:layout_height="89dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="140dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="@id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 app:srcCompat="@drawable/sntd" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
     </ScrollView>
 </androidx.drawerlayout.widget.DrawerLayout>
