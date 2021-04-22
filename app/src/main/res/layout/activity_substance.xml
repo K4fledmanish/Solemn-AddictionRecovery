@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
@@ -74,10 +75,12 @@
             android:layout_margin="10dp">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/alcoholCardView"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="20dp"
+                tools:ignore="OnClick">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -106,7 +109,7 @@
                         android:textSize="12sp" />
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/alcholImageView"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_alignParentRight="true"
@@ -125,6 +128,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/opioidsCardView"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
@@ -137,7 +141,7 @@
 
 
                     <TextView
-                        android:id="@+id/opiodsText"
+                        android:id="@+id/opioidsText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
@@ -149,7 +153,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/opiodsText"
+                        android:layout_below="@id/opioidsText"
                         android:layout_marginLeft="15dp"
                         android:fontFamily="@font/lemon"
                         android:text="Resilience Methods For \n Alcohols Craving"
@@ -157,7 +161,7 @@
                         android:textSize="12sp" />
 
                     <ImageView
-                        android:id="@+id/opiodsImageView"
+                        android:id="@+id/opioidsImageView"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_alignParentRight="true"
@@ -176,6 +180,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/benzoCardView"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
@@ -227,6 +232,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cannaCardView"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
@@ -281,6 +287,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/barbiCardView"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"

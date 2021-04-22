@@ -3,12 +3,14 @@ package com.example.solemn_addictionrecovery;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -21,16 +23,23 @@ import com.google.android.material.navigation.NavigationView;
 
 public class SubstanceActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
     GoogleSignInClient mGoogleSignInClient;
+    CardView cardviewAlcohol, cardViewOpioids, cardViewBenzo, cardViewCanna, cardViewBarbi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_substance);
+
+
+        cardviewAlcohol = findViewById(R.id.alcoholCardView);
+        cardViewOpioids = findViewById(R.id.opioidsCardView);
+        cardViewBenzo = findViewById(R.id.benzoCardView);
+        cardViewCanna = findViewById(R.id.cannaCardView);
+        cardViewBarbi = findViewById(R.id.barbiCardView);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -53,9 +62,49 @@ public class SubstanceActivity extends AppCompatActivity implements NavigationVi
 
         navigationView.setCheckedItem(R.id.nav_home);
 
+
+
+        cardviewAlcohol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SubstanceActivity.this, InfoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cardViewOpioids.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SubstanceActivity.this, OpioidActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cardViewBenzo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SubstanceActivity.this, BenzoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cardViewCanna.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SubstanceActivity.this, CannaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cardViewBarbi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SubstanceActivity.this, BarbiActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
-
-
 
 
     @Override

@@ -6,7 +6,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/profile_bg"
+    android:background="@drawable/home_bg"
     tools:context=".HomeActivity"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
@@ -65,8 +65,7 @@
                 android:id="@+id/imageLayout"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/home_bg">
+                android:layout_marginTop="20dp">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/profileCardView"
@@ -85,15 +84,16 @@
                         tools:srcCompat="@tools:sample/avatars" />
 
                 </androidx.cardview.widget.CardView>
+
                 <TextView
                     android:id="@+id/textName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/profileCardView"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/lemon"
-                    android:textSize="20dp"
-                    android:layout_marginTop="20dp"/>
+                    android:textSize="20dp" />
 
             </RelativeLayout>
 
@@ -101,7 +101,6 @@
                 android:id="@+id/emailLayout"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@drawable/menu_gradient"
                 app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
                 <TextView

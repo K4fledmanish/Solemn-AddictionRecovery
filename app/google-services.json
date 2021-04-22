@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "363810665139",
+    "project_id": "solemn-addiction-recovery",
+    "storage_bucket": "solemn-addiction-recovery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363810665139:android:a2cbbe3aa16f17884976c6",
+        "android_client_info": {
+          "package_name": "com.example.solemn_addictionrecovery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363810665139-mdfp4gdrc93n9ahrrjg10lavni5oivug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrpSP8tahyGlVZCk797nYxlTVR3s051pM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363810665139-mdfp4gdrc93n9ahrrjg10lavni5oivug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
