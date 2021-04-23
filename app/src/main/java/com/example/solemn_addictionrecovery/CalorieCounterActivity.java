@@ -60,7 +60,7 @@ public class CalorieCounterActivity extends AppCompatActivity implements Navigat
             public void onClick(View v) {
                 switch(v.getId()) {
                     case R.id.cameraBtn:
-                        Intent intent2 = new Intent(CalorieCounterActivity.this, CameraActivity.class);
+                        Intent intent2 = new Intent(CalorieCounterActivity.this, TFCameraActivity.class);
                         startActivity(intent2);
                         break;
                 }
