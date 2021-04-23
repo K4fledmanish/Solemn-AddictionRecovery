@@ -1,0 +1,4 @@
+0 Apple
+1 Banana
+2 Mixed
+3 Orange
