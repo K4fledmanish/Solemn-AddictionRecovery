@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.solemn_addictionrecovery">
 
+    <uses-sdk />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -31,11 +33,19 @@
         <activity android:name=".InfoActivity" />
         <activity android:name=".AlcoholActivity" />
         <activity android:name=".SubstanceActivity" />
-        <activity android:name=".CameraActivity" />
+
         <activity android:name=".CalorieCounterActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".ProfileActivity" />
+        <activity
+            android:name=".DetectorActivity"
+            android:theme="@style/AppTheme.ObjectDetection" >
+        </activity>
+        <activity android:name=".TFMainActivity"/>
+        <activity android:name=".TFCameraActivity"/>
+
         <activity android:name=".MainActivity">
+
 
              <intent-filter>
              <action android:name="android.intent.action.MAIN" />
@@ -45,25 +55,12 @@
              </intent-filter>
         </activity>
 
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity
-            android:name=".DetectorActivity"
-            android:theme="@style/AppTheme.ObjectDetection" >
-        </activity>
-        <activity
-            android:name=".TFMainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.MainContent" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

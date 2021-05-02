@@ -49,22 +49,22 @@ public class TFMainActivity extends Activity {
 
     public void addFood(String food) {
         int calories = getCalorie(food);
-        TextView total = (TextView) findViewById(R.id.total);
-        TextView progressBar_total = (TextView) findViewById(R.id.progressBar_total);
+        TextView total = findViewById(R.id.total);
+        TextView progressBar_total = findViewById(R.id.progressBar_total);
         int cur = Integer.parseInt(total.getText().toString());
         cur += calories;
         total.setText(cur + "");
         progressBar_total.setText("Current calories: " + cur + "");
-        ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar3);
+        ProgressBar progressBar = findViewById(R.id.progressBar3);
         progressBar.setProgress(cur);
-        TableLayout t1 = (TableLayout) findViewById(R.id.tablelayout);
+        TableLayout t1 = findViewById(R.id.tablelayout);
         TableRow tr = new TableRow(this);
         tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT));
         TextView date = new TextView(this);
         TextView foodItem = new TextView(this);
         TextView cals = new TextView(this);
 
-        long tsLong = (long) (System.currentTimeMillis() / 1000);
+        long tsLong = System.currentTimeMillis() / 1000;
         java.util.Date d = new java.util.Date(tsLong * 1000L);
         String ts = new SimpleDateFormat("h:mm a").format(d);
         date.setText(ts);

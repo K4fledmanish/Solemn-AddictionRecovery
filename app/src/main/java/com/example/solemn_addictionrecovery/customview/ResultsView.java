@@ -20,5 +20,5 @@ import com.example.solemn_addictionrecovery.tflite.Classifier.Recognition;
 import java.util.List;
 
 public interface ResultsView {
-  public void setResults(final List<Recognition> results);
+  void setResults(final List<Recognition> results);
 }

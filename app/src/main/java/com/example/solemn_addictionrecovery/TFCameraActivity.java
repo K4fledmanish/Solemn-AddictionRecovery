@@ -60,7 +60,7 @@ public abstract class TFCameraActivity extends AppCompatActivity
     private HandlerThread handlerThread;
     private boolean useCamera2API;
     private boolean isProcessingFrame = false;
-    private byte[][] yuvBytes = new byte[3][];
+    private final byte[][] yuvBytes = new byte[3][];
     private int[] rgbBytes = null;
     private int yRowStride;
     private Runnable postInferenceCallback;
@@ -283,7 +283,7 @@ public abstract class TFCameraActivity extends AppCompatActivity
             if (shouldShowRequestPermissionRationale(PERMISSION_CAMERA)) {
                 Toast.makeText(
                         TFCameraActivity.this,
-                        "Camera permission is required for this demo",
+                        "Camera permission is required for Calorie Counter.",
                         Toast.LENGTH_LONG)
                         .show();
             }

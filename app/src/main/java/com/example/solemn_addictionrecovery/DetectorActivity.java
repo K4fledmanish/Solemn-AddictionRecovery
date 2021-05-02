@@ -140,7 +140,7 @@ public class DetectorActivity extends TFCameraActivity implements OnImageAvailab
         cropToFrameTransform = new Matrix();
         frameToCropTransform.invert(cropToFrameTransform);
 
-        trackingOverlay = (OverlayView) findViewById(R.id.tracking_overlay);
+        trackingOverlay = findViewById(R.id.tracking_overlay);
         trackingOverlay.addCallback(
                 new DrawCallback() {
                     @Override
@@ -242,16 +242,16 @@ public class DetectorActivity extends TFCameraActivity implements OnImageAvailab
                                 new Runnable() {
                                     @Override
                                     public void run() {
-                                        TextView detection_text = (TextView) findViewById(R.id.detectText);
+                                        TextView detection_text = findViewById(R.id.detectText);
                                         if (mappedRecognitions.size() > 0) {
                                             detection_text.setText("Food detected!");
                                         } else {
                                             detection_text.setText("Point camera at food.");
                                         }
 
-                                        TextView frame = (TextView) findViewById(R.id.frame_info);
-                                        TextView crop = (TextView) findViewById(R.id.crop_info);
-                                        TextView inference = (TextView) findViewById(R.id.inference_info);
+                                        TextView frame = findViewById(R.id.frame_info);
+                                        TextView crop = findViewById(R.id.crop_info);
+                                        TextView inference = findViewById(R.id.inference_info);
 
                                         if (isDebug()) {
                                             frame.setText("Frame: " + previewWidth + "x" + previewHeight);
@@ -291,7 +291,7 @@ public class DetectorActivity extends TFCameraActivity implements OnImageAvailab
     // Which detection model to use: by default uses Tensorflow Object Detection API frozen
     // checkpoints.
     private enum DetectorMode {
-        TF_OD_API;
+        TF_OD_API
     }
 
 }
