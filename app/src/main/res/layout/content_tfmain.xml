@@ -17,7 +17,7 @@
         android:layout_marginBottom="10dp"
 
         android:fontFamily="cursive"
-        android:text="Food.AI"
+        android:text="Calorie Counter"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
