@@ -98,7 +98,7 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
                 startActivity(intent);
                 break;
             case R.id.nav_calorie:
-                Intent intent2 = new Intent(ProfileActivity.this, CalorieCounterActivity.class);
+                Intent intent2 = new Intent(ProfileActivity.this, TFMainActivity.class);
                 startActivity(intent2);
                break;
 

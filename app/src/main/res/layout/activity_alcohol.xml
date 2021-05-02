@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
@@ -12,50 +13,118 @@
     tools:openDrawer="start">
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/nav_view"
-        app:headerLayout="@layout/header"
-        app:menu="@menu/main_menu"
         android:layout_gravity="start"
-        android:background="@drawable/menu_gradient"/>
+        android:background="@drawable/menu_gradient"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
 
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
 
-
-        <RelativeLayout
-
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#00FFFFFF"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".InfoActivity">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:orientation="vertical">
 
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="46dp"
-                android:layout_height="41dp"
-                android:layout_marginTop="30dp"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme"
-                app:navigationIcon="@drawable/menu" />
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="46dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="30dp"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    app:navigationIcon="@drawable/menu" />
 
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="10dp"
-                android:layout_alignParentEnd="@id/toolbar"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                app:srcCompat="@drawable/sntd" />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="@id/toolbar"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/sntd" />
+
+                <TextView
+                    android:id="@+id/alcoholHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20pt"
+                    android:fontFamily="@font/holtwood_one_sc"
+                    android:text="Alcohol"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/alcoholDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/alcoholHead"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="10sp"
+                    android:fontFamily="@font/anton"
+                    android:text="Alcohol is the most widely abused substance
+across most of the world, including in the United
+States. Legal to some extent in all 50 states,
+alcohol impacts numerous body systems, which in
+turn causes numerous effects in users. Alcohol
+creates feelings of euphoria and lowers inhibitions,
+but it also severely impairs judgment, perception,
+and reaction times. Alcohol is a central nervous
+system depressant, but it causes the most severe
+long-term damage to the liver. There are many
+forms of alcohol, including:"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/alcoholList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/alcoholDescription"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:text="i)Beer \nii)Wine \niii)Liquor"
+                    android:fontFamily="@font/anton"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/alcoh"
+                    android:layout_below="@id/alcoholList"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    />
 
 
-        </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
     </ScrollView>
 </androidx.drawerlayout.widget.DrawerLayout>

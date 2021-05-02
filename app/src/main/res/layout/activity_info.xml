@@ -28,9 +28,6 @@
         android:layout_height="match_parent"
         >
 
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -61,51 +58,48 @@
                     android:layout_marginTop="10dp"
                     android:layout_alignParentEnd="@id/toolbar"
                     android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
                     app:srcCompat="@drawable/sntd" />
 
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/titleLayout"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="#5BDC3E3E">
-
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/alchoholHead"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
+                    android:layout_below="@id/imageView"
                     android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
+                    android:layout_marginTop="20pt"
                     android:fontFamily="@font/holtwood_one_sc"
+                    android:text="12 Steps for \nAlcoholics"
                     android:textSize="30sp" />
 
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/descriptionLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#60FFDF0B">
-
                 <TextView
-                    android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/francois_one"
+                    android:layout_below="@id/alchoholHead"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="10sp"
+                    android:fontFamily="@font/anton"
+                    android:text="Step 1: We admitted we were powerless over alcohol – that our lives had become unmanageable.
+                    \n Step 2: Came to believe that a Power greater than ourselves could restore us to sanity.
+                    \n Step 3: Made a decision to turn our will and our lives over to the care of God as we understood God.
+                    \n Step 4: Made a searching and fearless moral inventory of ourselves.
+                    \n Step 5: Admitted to God, to ourselves, and to another human being the exact nature of our wrongs.
+                    \n Step 6: Were entirely ready to have God remove all these defects of character.
+                    \n Step 7: Humbly asked God to remove our shortcomings.
+                    \n Step 8: Made a list of all persons we had harmed, and became willing to make amends to them all.
+                    \n Step 9: Made direct amends to such people wherever possible, except when to do so would injure them or others.
+                    \n Step 10: Continued to take personal inventory and when we were wrong promptly admitted it.
+                    \n Step 11: Sought through prayer and meditation to improve our conscious contact with God as we understood God, praying only for knowledge of God’s will for us and the power to carry that out.
+                    \n Step 12: Having had a spiritual awakening as the result of these steps, we tried to carry this message to other alcoholics, and to practice these principles in all our affairs."
+                    android:textAlignment="center"
                     android:textSize="12sp" />
 
 
+
+
             </RelativeLayout>
+
 
 
 

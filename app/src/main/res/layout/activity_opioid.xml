@@ -28,9 +28,6 @@
         android:layout_height="match_parent"
         >
 
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -61,51 +58,59 @@
                     android:layout_marginTop="10dp"
                     android:layout_alignParentEnd="@id/toolbar"
                     android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
                     app:srcCompat="@drawable/sntd" />
 
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/titleLayout"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="#5BDC3E3E">
-
                 <TextView
-                    android:id="@+id/opioidTitle"
+                    android:id="@+id/opioidsHead"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
+                    android:layout_below="@id/imageView"
                     android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
+                    android:layout_marginTop="20pt"
                     android:fontFamily="@font/holtwood_one_sc"
+                    android:text="Opioids"
                     android:textSize="30sp" />
 
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/descriptionLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#60FFDF0B">
-
                 <TextView
-                    android:id="@+id/opioidDescription"
+                    android:id="@+id/opioidsDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/francois_one"
+                    android:layout_below="@id/opioidsHead"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="10sp"
+                    android:fontFamily="@font/anton"
+                    android:text="Also called opiates, opioids are either derived from the drug opium or chemicals designed to mimic it. Opioids work by interacting with neurotransmitters in the brain and blocking the signals that they are sending. This enables opioids to serve as powerful pain killers, but it also can cause feelings of intense pleasure, leading to addiction. Opioid addiction is one of the most serious problems faced by America today. Opioids are some of the most addictive of all known substances, and they are also some of the deadliest. Some of the most well-known opioids include:"
+                    android:textAlignment="center"
                     android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/opioidsList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/opioidsDescription"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:text="i)Heroin \nii)Fentanyl \niii)Oxycodone"
+                    android:fontFamily="@font/anton"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/op"
+                    android:layout_below="@id/opioidsList"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    />
+
 
 
             </RelativeLayout>
+
 
 
 

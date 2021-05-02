@@ -67,7 +67,7 @@ public class SubstanceActivity extends AppCompatActivity implements NavigationVi
         cardviewAlcohol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SubstanceActivity.this, InfoActivity.class);
+                Intent intent = new Intent(SubstanceActivity.this, AlcoholActivity.class);
                 startActivity(intent);
             }
         });
@@ -125,7 +125,7 @@ public class SubstanceActivity extends AppCompatActivity implements NavigationVi
                 startActivity(intent);
                 break;
             case R.id.nav_calorie:
-                Intent intent2 = new Intent(SubstanceActivity.this, CalorieCounterActivity.class);
+                Intent intent2 = new Intent(SubstanceActivity.this, TFMainActivity.class);
                 startActivity(intent2);
                 break;
 
@@ -138,7 +138,7 @@ public class SubstanceActivity extends AppCompatActivity implements NavigationVi
                 break;
 
             case R.id.nav_alcohol:
-                Intent intent4 = new Intent(SubstanceActivity.this, AlcoholActivity.class);
+                Intent intent4 = new Intent(SubstanceActivity.this, InfoActivity.class);
                 startActivity(intent4);
                 break;
 

@@ -3,11 +3,9 @@ package com.example.solemn_addictionrecovery;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,12 +16,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class BenzoActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -33,10 +25,6 @@ public class BenzoActivity extends AppCompatActivity implements NavigationView.O
     Toolbar toolbar;
     GoogleSignInClient mGoogleSignInClient;
 
-    FirebaseAuth fAuth;
-    FirebaseFirestore fStore;
-
-    private TextView title, description;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,21 +46,7 @@ public class BenzoActivity extends AppCompatActivity implements NavigationView.O
 
         navigationView.setCheckedItem(R.id.nav_home);
 
-        title = findViewById(R.id.benzoTitle);
-        description = findViewById(R.id.benzoDescription);
 
-        fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
-
-        DocumentReference df = fStore.collection("Info").document("Benzo");
-        df.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-
-                title.setText(documentSnapshot.getString("title"));
-                description.setText(documentSnapshot.getString("description"));
-            }
-        });
     }
 
     @Override
@@ -93,7 +67,7 @@ public class BenzoActivity extends AppCompatActivity implements NavigationView.O
                 startActivity(intent);
                 break;
             case R.id.nav_calorie:
-                Intent intent2 = new Intent(BenzoActivity.this, CalorieCounterActivity.class);
+                Intent intent2 = new Intent(BenzoActivity.this, TFMainActivity.class);
                 startActivity(intent2);
                 break;
 
@@ -108,7 +82,7 @@ public class BenzoActivity extends AppCompatActivity implements NavigationView.O
                 break;
 
             case R.id.nav_alcohol:
-                Intent intent4 = new Intent(BenzoActivity.this, AlcoholActivity.class);
+                Intent intent4 = new Intent(BenzoActivity.this, InfoActivity.class);
                 startActivity(intent4);
                 break;
 

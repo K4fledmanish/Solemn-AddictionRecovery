@@ -12,14 +12,14 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:background="@drawable/menu_gradient"
-            app:headerLayout="@layout/header"
-            app:menu="@menu/main_menu" />
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/menu_gradient"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
 
 
     <ScrollView
@@ -27,9 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-
-
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,51 +58,69 @@
                     android:layout_marginTop="10dp"
                     android:layout_alignParentEnd="@id/toolbar"
                     android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
                     app:srcCompat="@drawable/sntd" />
 
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/titleLayout"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="#5BDC3E3E">
-
                 <TextView
-                    android:id="@+id/barbiTitle"
+                    android:id="@+id/barbiHead"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
+                    android:layout_below="@id/imageView"
                     android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
+                    android:layout_marginTop="20pt"
                     android:fontFamily="@font/holtwood_one_sc"
+                    android:text="Barbiturates"
                     android:textSize="30sp" />
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/descriptionLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#60FFDF0B">
 
                 <TextView
                     android:id="@+id/barbiDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/francois_one"
+                    android:layout_below="@id/barbiHead"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="10sp"
+                    android:fontFamily="@font/anton"
+                    android:text="Barbiturates act on the central nervous system by
+slowing down its functioning. Barbiturates are
+derivatives of the chemical barbituric acid.
+Barbiturates were historically popular for the
+treatment of psychiatric and sleep disorders, and
+they are still used for anesthesia and treatment of a
+number of conditions such as epilepsy and
+headaches. Barbiturates are highly addictive, and
+they also present a very high overdose risk as they
+cause many body systems to shut down. Examples
+of barbiturates include:"
+                    android:textAlignment="center"
                     android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/barbiList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/barbiDescription"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:text="i)Amytal \nii)Luminal \niii)Pentobarbita"
+                    android:fontFamily="@font/anton"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/barbi"
+                    android:layout_below="@id/barbiList"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    />
+
 
 
             </RelativeLayout>
+
 
 
 

@@ -74,7 +74,7 @@ public class AlcoholActivity extends AppCompatActivity implements NavigationView
                 startActivity(intent);
                 break;
             case R.id.nav_calorie:
-                Intent intent2 = new Intent(AlcoholActivity.this, CalorieCounterActivity.class);
+                Intent intent2 = new Intent(AlcoholActivity.this, TFMainActivity.class);
                 startActivity(intent2);
                 break;
 
@@ -89,6 +89,8 @@ public class AlcoholActivity extends AppCompatActivity implements NavigationView
                 break;
 
             case R.id.nav_alcohol:
+                Intent intent5 = new Intent(AlcoholActivity.this, InfoActivity.class);
+                startActivity(intent5);
                 break;
 
             case R.id.nav_logout:

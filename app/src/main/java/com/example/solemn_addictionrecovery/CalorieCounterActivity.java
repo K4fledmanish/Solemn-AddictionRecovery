@@ -103,7 +103,7 @@ public class CalorieCounterActivity extends AppCompatActivity implements Navigat
                 break;
 
             case R.id.nav_alcohol:
-                Intent intent4 = new Intent(CalorieCounterActivity.this, AlcoholActivity.class);
+                Intent intent4 = new Intent(CalorieCounterActivity.this, InfoActivity.class);
                 startActivity(intent4);
                 break;
 

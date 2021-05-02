@@ -76,7 +76,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, CalorieCounterActivity.class);
+                Intent intent = new Intent(HomeActivity.this, TFMainActivity.class);
                 startActivity(intent);
             }
         });
@@ -92,7 +92,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         imageView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, AlcoholActivity.class);
+                Intent intent = new Intent(HomeActivity.this, InfoActivity.class);
                 startActivity(intent);
             }
         });
@@ -119,7 +119,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_home:
                 break;
             case R.id.nav_calorie:
-                Intent intent = new Intent(HomeActivity.this, CalorieCounterActivity.class);
+                Intent intent = new Intent(HomeActivity.this, TFMainActivity.class);
                 startActivity(intent);
                 break;
 
@@ -134,7 +134,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_alcohol:
-                Intent intent4 = new Intent(HomeActivity.this, AlcoholActivity.class);
+                Intent intent4 = new Intent(HomeActivity.this, InfoActivity.class);
                 startActivity(intent4);
                 break;
 

@@ -3,11 +3,9 @@ package com.example.solemn_addictionrecovery;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,12 +16,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class InfoActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -32,10 +24,6 @@ public class InfoActivity extends AppCompatActivity implements NavigationView.On
     Toolbar toolbar;
     GoogleSignInClient mGoogleSignInClient;
 
-    FirebaseAuth fAuth;
-    FirebaseFirestore fStore;
-
-    private TextView title, description;
 
 
 
@@ -60,21 +48,7 @@ public class InfoActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setCheckedItem(R.id.nav_home);
 
-        title = findViewById(R.id.title);
-        description = findViewById(R.id.description);
 
-        fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
-
-        DocumentReference df = fStore.collection("Info").document("Substance");
-        df.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-
-                title.setText(documentSnapshot.getString("title"));
-                description.setText(documentSnapshot.getString("description"));
-            }
-        });
     }
 
     @Override
@@ -95,7 +69,7 @@ public class InfoActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 break;
             case R.id.nav_calorie:
-                Intent intent2 = new Intent(InfoActivity.this, CalorieCounterActivity.class);
+                Intent intent2 = new Intent(InfoActivity.this, TFMainActivity.class);
                 startActivity(intent2);
                 break;
 
